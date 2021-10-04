@@ -1,20 +1,22 @@
 declare module 'react-native-switch-pro' {
-  import { Component } from 'react';
-  import { StyleProp, ViewStyle } from 'react-native';
+  import * as React from 'react'
+  import {ViewStyle} from 'react-native'
+
   export interface SwitchProps {
-    width?: number;
-    height?: number;
-    value?: boolean;
-    disabled?: boolean;
-    circleColorActive?: string;
-    circleColorInactive?: string;
-    backgroundActive?: string;
-    backgroundInactive?: string;
-    onAsyncPress?: (cb: (result: boolean) => void) => void;
-    onSyncPress?: (value: boolean) => void;
-    style?: StyleProp<ViewStyle>;
-    circleStyle?: StyleProp<ViewStyle>;
+    width?: number
+    height?: number
+    value?: boolean
+    disabled?: boolean
+    circleColorActive?: string
+    circleColorInactive?: string
+    style?: ViewStyle[]
+    circleStyle?: ViewStyle[]
+    backgroundActive?: string
+    backgroundInactive?: string
+    onSyncPress?: (value: boolean) => void
+    onAsyncPress?: () => void
   }
 
-  export default class Switch extends Component<SwitchProps> {}
+  const Switch: React.FC<SwitchProps> = () => {}
+  export default Switch
 }
