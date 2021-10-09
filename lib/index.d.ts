@@ -1,4 +1,4 @@
-declare module 'react-native-switch-pro' {
+declare module 'react-native-switch-pro-with-react-17-support' {
   import * as React from 'react'
   import {ViewStyle} from 'react-native'
 
